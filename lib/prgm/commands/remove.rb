@@ -4,8 +4,7 @@ module PRGM
       parameter "NAME", "Name of item to remove"
 
       def execute
-        puts "Name: #{name}"
-        puts "Values: smt"
+        PRGM::Models::Item.where(name: name).first.destroy
       end
     end
   end

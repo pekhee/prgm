@@ -2,20 +2,26 @@ $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "prgm/identity"
 
 Gem::Specification.new do |spec|
-  spec.name = Prgm::Identity.name
-  spec.version = Prgm::Identity.version
+  spec.name = PRGM::Identity.name
+  spec.version = PRGM::Identity.version
   spec.platform = Gem::Platform::RUBY
   spec.authors = ["Pooyan Khosravi"]
   spec.email = ["pekhee@gmail.com"]
-  spec.homepage = "https://github.com//prgm"
-  spec.summary = "TODO: Add gem summary here."
-  spec.description = "TODO: Add gem description here."
+  spec.homepage = "https://github.com/pekhee/prgm"
+  spec.summary = "Sample gem for persistent clis"
+  spec.description =
+    "An example of embedding ActiveRecord (and migrations) in a cli app"
   spec.license = "MIT"
 
   if ENV["RUBY_GEM_SECURITY"] == "enabled"
     spec.signing_key = File.expand_path("~/.ssh/gem-private.pem")
     spec.cert_chain = [File.expand_path("~/.ssh/gem-public.pem")]
   end
+
+  spec.add_dependency "clamp"
+  spec.add_dependency "sqlite3"
+  spec.add_dependency "activerecord", "~> 4.0"
+  spec.add_dependency "activesupport", "~> 4.0"
 
   spec.add_development_dependency "rake"
   spec.add_development_dependency "gemsmith"

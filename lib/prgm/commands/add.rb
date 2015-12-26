@@ -5,8 +5,7 @@ module PRGM
       parameter "VALUE ...", "Values to store in item", attribute_name: :values
 
       def execute
-        puts "Name: #{name}"
-        puts "Values: #{values.join(" ")}"
+        PRGM::Models::Item.create(name: name, values: values.join(" "))
       end
     end
   end
