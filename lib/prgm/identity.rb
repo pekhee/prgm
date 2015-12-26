@@ -1,4 +1,4 @@
-module Prgm
+module PRGM
   # Gem identity information.
   module Identity
     def self.name
@@ -6,7 +6,7 @@ module Prgm
     end
 
     def self.label
-      "Prgm"
+      "PRGM"
     end
 
     def self.version
