@@ -4,7 +4,7 @@ unless File.exist? PRGM::STORAGE_DIR + "/is_migrated"
       table.string :name
       table.text :values
 
-      table.timestamps
+      table.timestamps null: false
     end
   end
 
