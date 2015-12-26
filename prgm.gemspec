@@ -13,11 +13,6 @@ Gem::Specification.new do |spec|
     "An example of embedding ActiveRecord (and migrations) in a cli app"
   spec.license = "MIT"
 
-  if ENV["RUBY_GEM_SECURITY"] == "enabled"
-    spec.signing_key = File.expand_path("~/.ssh/gem-private.pem")
-    spec.cert_chain = [File.expand_path("~/.ssh/gem-public.pem")]
-  end
-
   spec.add_dependency "clamp"
   spec.add_dependency "sqlite3"
   spec.add_dependency "activerecord", "~> 4.0"
